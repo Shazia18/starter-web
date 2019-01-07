@@ -38,3 +38,4 @@ for (let link of links) {
   console.log(inputs[1].getAttribute("password"));
   console.log(inputs[2].getAttribute("Age"));
   console.dir(inputs);
+  
