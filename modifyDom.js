@@ -42,3 +42,20 @@ let div_two=div_one.cloneNode(true);
 console.log(div_two);
 let div_three=div_one.cloneNode(false);
 console.log(div_three);
+
+//home work
+
+// let div = document.createElement('div');
+// div.className="alert alert-primary";
+// div.innerHTML="<p>This is a primary element</p>";
+// document.body.appendChild(div);
+// console.log(div);
+
+// let _list= document.createElement('ol');
+// _list.innerHTML="<li>MyJava</li><li>MyKotlin</li><li>MyJavaScript</li><li>MyPHP</li>"
+// newli=document.createElement('li');
+// newli.innerHTML="MyLanguages";
+// _list.appendChild(newLi);
+// _list.insertBefore(newLi,_list.firstChild);
+// _list.removeChild(_list.children[2]);
+// _list.remove();
