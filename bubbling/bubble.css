@@ -1,0 +1,40 @@
+body{
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+width: 100%;
+
+}
+.one{
+    background-color: rgb(84, 21, 143);
+    margin: 20px 20px;
+    padding: 14px 14px;
+
+    
+  
+
+}
+.two{
+    background-color: rgb(34, 109, 15);
+    margin: 100px 100px;
+    padding: 15px 15px;
+    
+}
+
+.three{
+    background-color: rgb(109, 9, 9);
+    margin: 90px 90px;
+    padding: 15px 15px;
+
+}
+.four{
+    background-color: rgb(139, 52, 20);
+    margin: 70px 70px;
+    padding: 10px 10px;
+}
+.five{
+    background-color: rgb(8, 95, 95);
+    margin: 50px 50px;
+    padding: 5px 5px;
+}
