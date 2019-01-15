@@ -43,59 +43,66 @@
 // };
 // studentTwo.employmentStatus();
 
-const ul = document.querySelector('ul');
-// const add = document.querySelector('.add');
-const btn = document.getElementsByTagName('button');
-const input = document.getElementById('item');
+let userInput = document.getElementById('myInput');
+// console.log(userInput);
+// alert("sdfijer");
+let submitButton = document.getElementById('submit');
 
-function toD0(){
-
-}
-let items;
-toD0.prototype.addItems = function(){
-    if(localStorage.getItem('items')){
-        items=JSON.parse(localStorage.getItem('items'))
-        }
-        else{
-            items=[];
-        }
-        const list=(text)=>{
-            const li =document.createElement('li');
-            li.textContent=text;
-        ;
-        
-        
-        ul.appendChild(li);
-        }
-        const form = document.querySelector('form');
-        form.addEventListener("submit",function(e){
-            e.preventDefault();
-            items.push(input.value);
-            localStorage.setItem('items',JSON.stringify(items));
-            list(input.value);
-            input.value="";
-            console.log("test");
-        });
+function Todo(){
 
 }
-toD0.prototype.getItems = function(){
-    console.log(localStorage.getItem('items'));
-    // data.forEach(item=>{
-    //     list(item);
-    // });
+Todo.prototype.addItems = function(){
+  submitButton.addEventListener('click',onClick);
+
+  let newLi = document.createElement("li");
+  let list = document.getElementById("list");
+  function onClick(){
+    let inputValue = userInput.value;
+   console.log(inputValue);
+  
+  list.style.backgroundColor="khaki";
+  
+  // list.insertAdjacentHTML("afterend", '<button class="remove-button">[x]</button>');
+  
+  let newLi = document.createElement("li");
+  newLi.className="pane";
+  
+  newLi.innerHTML=inputValue;
+  
+    list.appendChild(newLi);
+    console.log("test 1");
+
+    let cbtn = document.createElement('button');
+  cbtn.className="cross-btn";
+  cbtn.innerHTML="[x]";
+  newLi.appendChild(cbtn);
+
+  userInput.value=" ";
+  // newLi.insertAdjacentHTML("afterend", '<bu9tton class="remove-button">[x]</button>');
+
+cbtn.addEventListener("click",onCancel);
+function onCancel(){
+// newLi.style.display="none";
+newLi.remove();
 }
-toD0.prototype.removeItems = function(){
-btn.addEventListener("click",function(){
-localStorage.clear();
-console.log("test2");
-while(ul.firstChild){
-    ul.removeChild(ul.firstChild);
-}
-});
 
 }
+}
+
+Todo.prototype.removeItem = function(){
+  let btnCancel = document.getElementById('cancelList');
+  btnCancel.addEventListener("click",onRemove);
+  function onRemove(){
+    let list = document.getElementById('list');
+    list.remove();
+  }
+}
+    
+toadd = new Todo();
+toadd.addItems();
+toadd.removeItem();
 
 
-add = new toD0();
-add.addItems();
-add.getItems();
+
+
+
