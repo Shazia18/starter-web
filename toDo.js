@@ -1,4 +1,5 @@
-let userInput = document.getElementById('myInput');
++
+
 // console.log(userInput);
 // alert("sdfijer");
 let submitButton = document.getElementById('submit');
@@ -7,6 +8,10 @@ submitButton.addEventListener('click',onClick);
 let newLi = document.createElement("li");
 let list = document.getElementById("list");
 function onClick(){
+
+
+  
+      
   let inputValue = userInput.value;
  console.log(inputValue);
 
@@ -41,7 +46,8 @@ document.body.addEventListener("click",function(e){
     e.target.parentElement.remove();
   }
   });
-      
+
+
 }
 
 // let btnCancel = document.getElementById('cancelList');

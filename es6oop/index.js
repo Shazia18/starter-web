@@ -19,7 +19,7 @@ class Car {
             <td>${item[i].model} </td>
             <td>${item[i].price}</td>
             <td>${item[i].desc}</td>
-            <td><button class="cancel">[x]</button></td>
+            <td><button class="cancel" value="${i}">[x]</button></td>
 
             
           `;
@@ -32,7 +32,7 @@ class Car {
 
     }}
 
-  
+
   class Store extends Car {
     constructor(name, make, price, model, desc) {
       super(name, make, price, model, desc);
@@ -51,6 +51,7 @@ class Car {
   
   }
   Car.display();
+
   document.body.addEventListener("submit", function(e) {
     const name = document.getElementById("name").value;
     // console.log(name);
@@ -64,3 +65,25 @@ class Car {
     console.log(obj);
     obj.insertCars(obj);
   });
+  function removeRow(){
+    let btn = document.getElementsByClassName("cancel");
+   document.body.addEventListener("click",function(e){
+     if(e.target.classList.contains("cancel")){
+       e.target.parentElement.parentElement.remove();
+     }
+
+   });
+   const item = JSON.parse(localStorage.getItem("cars"));
+      // console.log(item);
+      if (item != null) {
+        for (let i = 0; item.length > i; i++) {
+        if(i===btn.value){
+          item.splice(i,1);
+        }
+       
+          
+
+        }
+      }
+  }
+  removeRow();

@@ -17,8 +17,8 @@ document.querySelector(".five").addEventListener("click",function(event){
     // event.stopImmediatePropagation();
     
     if (document.getElementById("check").checked) {
-        event.stopPropagation();
-        // event.stopImmediatePropagation();
+        // event.stopPropagation();
+        event.stopImmediatePropagation();
         
       }
         
