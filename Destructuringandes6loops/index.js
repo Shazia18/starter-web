@@ -33,3 +33,9 @@ pets.forEach(function(index){
 // arr.forEach(element => {
 // console.log(element);
 // });
+const pet=[{ name: "tomy", age: 12, favoritefood: "dogfood"},
+{name:"jasper", age: 5, favoritefood: "catfood"},
+{ name: "miranda",age: 23, favoritefood:"grass"}];
+for(let item in pet){
+  console.log(pet[item].age);
+}
