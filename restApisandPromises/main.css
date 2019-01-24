@@ -1,0 +1,21 @@
+.body{
+    justify-content: center;
+}
+#item{
+    
+    align-items: center;
+    width: 60%;
+    font-size: 1rem;
+    border: 2px solid rgb(107, 73, 21);
+    
+    height: 30px;
+    background-color: rgb(241, 226, 203);
+    
+}
+#btns{
+font-size: 1rem;
+width: 15%;
+height: 35px;
+background-color: rgb(241, 226, 203);
+border: 2px solid rgb(107, 73, 21);
+}
