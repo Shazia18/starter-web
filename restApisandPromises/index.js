@@ -16,12 +16,7 @@ class myRepo{
                 if(this.http.status===200){
                     let arrayData=[];
                      arrayData = JSON.parse(this.http.responseText);
-                    // document.write(arrayData);
-                    // let myRepo=[];
-                    // arrayData.forEach(function(user){
-                    //     myRepo.push(user.name);
-                    // });
-                    // console.log(myRepo);
+                  
                     let myRepo = arrayData.map(item=>item.name);
                     console.log(myRepo);
                     myRepo.forEach((names=>{

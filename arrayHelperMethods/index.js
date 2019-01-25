@@ -23,12 +23,12 @@
 // return total+item;
 // },16);
 // console.log(newArr);
-// const arrayTwo = [{name:"Jammes", age: 56, occupation: "actor"},
-// { name: "Fahad", age:34, occupation: "joker"},
-// {name: "olivia", age: 28, occupation:"chef"}];
+const arrayTwo = [{name:"Jammes", age: 56, occupation: "actor"},
+{ name: "Fahad", age:34, occupation: "joker"},
+{name: "olivia", age: 28, occupation:"chef"}];
 
-// const occupation_list = arrayTwo.map(item=>item.occupation);
-// console.log(occupation_list);
+const occupation_list = arrayTwo.map(item=>item.occupation);
+console.log(occupation_list);
 // const name_list = arrayTwo.map(item=>item.name);
 // console.log(name_list);
 // const food = [{name: "banana", color: "yellow",isHeathy:"yes"},
@@ -66,42 +66,42 @@
 // console.log( isParenComplete(")(((()))") );
 
 
-const Http = new XMLHttpRequest();
-const url = "https://jsonplaceholder.typicode.com/posts";
-Http.open("GET",url);
-Http.send();
-Http.onreadystatechange = function(){
-    if(this.readyState ==4 && this.status==200){
-        console.log(Http.responseText);
-    }
-}
-function myHomerWOrk(subject,callback){
-    console.log(`I am doing my ${subject} homework`);
-    callback();
-
-}
-
-function myPendingHomework(subject){
-
-    console.log(`home work of ${subject} is pending`);
-}
-
-
-myHomerWOrk("Math",myCallback);
-myPendingHomework("Physics");
-
-
-function myCallback(){
-    console.log("Nothing is pending,,, Yayy");
-}
-
-// let myPromise = new Promise((resolve,reject)=>{
-//     let totalPromises = 1;
-//     if(totalPromises> 0){
-//         resolve("Promise yet to be completed");
+// const Http = new XMLHttpRequest();
+// const url = "https://jsonplaceholder.typicode.com/posts";
+// Http.open("GET",url);
+// Http.send();
+// Http.onreadystatechange = function(){
+//     if(this.readyState ==4 && this.status==200){
+//         console.log(Http.responseText);
 //     }
-//     else{
-//         reject("No promises pending");
-//     }
-// });
-// myPromise
+// }
+// function myHomerWOrk(subject,callback){
+//     console.log(`I am doing my ${subject} homework`);
+//     callback();
+
+// }
+
+// function myPendingHomework(subject){
+
+//     console.log(`home work of ${subject} is pending`);
+// }
+
+
+// myHomerWOrk("Math",myCallback);
+// myPendingHomework("Physics");
+
+
+// function myCallback(){
+//     console.log("Nothing is pending,,, Yayy");
+// }
+
+// // let myPromise = new Promise((resolve,reject)=>{
+// //     let totalPromises = 1;
+// //     if(totalPromises> 0){
+// //         resolve("Promise yet to be completed");
+// //     }
+// //     else{
+// //         reject("No promises pending");
+// //     }
+// // });
+// // myPromise
